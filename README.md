@@ -15,7 +15,7 @@ So updating thousands of cash registries is pretty much costly solution, so in m
 
 ## With Let’s Encrypt
 
-Copy all scripts from folder `scripts` to `/home/myuser/scripts`. In `env.sh` you update `CERTBOT_EMAIL` to your own email or you can add `CERTBOT_EMAIL` environment variable in the `.bash_profile` of the user, that will execute `run_certbot.sh` as cronjob. Another option is to add it in the `/etc/environment` file, if that suits your case more.
+Copy all scripts from folder `scripts` to `/home/myuser/scripts`. In `env.sh` you update `CERTBOT_EMAIL` to your own email or you can add `CERTBOT_EMAIL` environment variable in the `.bash_profile` of the user, that will execute `run_certbot.sh` as cronjob. Another option is to add it in the `/etc/environment` file, if that suits your case more. You need to create a `letsencrypt` folder under `/etc` as well.
 
 Execute:
 
