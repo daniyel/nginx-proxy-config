@@ -12,3 +12,20 @@ So updating thousands of cash registries is pretty much costly solution, so in m
 ## Diagram
 
 ![Alt text](src/nginx-proxy-diagram.jpg?raw=true "nginx proxy diagram")
+
+## With Let’s Encrypt
+
+In `env.sh` you should update `CERTBOT_EMAIL` to your own email. You can add this environment variable also in the `.bash_profile` of the user, that will execute `run_certbot.sh` as cronjob or in the `/etc/environment` file, if that case suits your needs more.
+
+Execute:
+
+```
+$ sudo crontab -e
+```
+
+and add line:
+
+```
+10 3 * * 0 /bin/sh /home/myuser/scripts/run_certbot.sh
+```
+which means execute job `at 03:10 on Sunday`.
